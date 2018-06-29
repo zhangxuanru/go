@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"mymath"
 )
-func main()  {
-	fmt.Println("Hello world, Sqrt(2) = %v\n",mymath.Sqrt(2))
+
+func main() {
+	fmt.Println("Hello world, Sqrt(2) = %v\n", mymath.Sqrt(2))
 }
