@@ -26,7 +26,7 @@ func  main()  {
 }
 
 func init()  {
-   orm.RegisterDataBase("default","mysql","root:abc123123@tcp(23.106.155.177:3306)/test?charset=utf8")
+   orm.RegisterDataBase("default","mysql","root:abc123123@tcp(127.0.0.1:3306)/test?charset=utf8")
    orm.RegisterModel(new(User))
    orm.RunSyncdb("default",false,true)
    //根据数据库的别名，设置数据库的最大空闲连接

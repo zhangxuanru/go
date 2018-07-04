@@ -23,7 +23,7 @@ func main()  {
   插入数据
  */
 func Insert()  {
-     db,err := sql.Open("mysql","root:abc123123@tcp(23.106.155.177:3306)/test?charset=utf8")
+     db,err := sql.Open("mysql","root:abc123123@tcp(127.0.0.1:3306)/test?charset=utf8")
      checkErr(err)
      stmp,err := db.Prepare("INSERT INTO userinfo(username,department,created) VALUES (?,?,?)")
      checkErr(err)
@@ -38,7 +38,7 @@ func Insert()  {
 修改语句
  */
 func updateData()  {
-    db,err := sql.Open("mysql","root:abc123123@tcp(23.106.155.177:3306)/test?charset=utf8")
+    db,err := sql.Open("mysql","root:abc123123@tcp(127.0.0.1:3306)/test?charset=utf8")
     checkErr(err)
     stmp,err := db.Prepare("UPDATE userinfo SET username= ? where uid=?")
     checkErr(err)
@@ -52,7 +52,7 @@ func updateData()  {
 查询语句
  */
 func getSelectData()  {
-   db,err := sql.Open("mysql","root:abc123123@tcp(23.106.155.177:3306)/test?charset=utf8")
+   db,err := sql.Open("mysql","root:abc123123@tcp(127.0.0.1:3306)/test?charset=utf8")
    checkErr(err)
 
    //方法一：查询预处理
@@ -78,7 +78,7 @@ func getSelectData()  {
 删除语句
  */
 func delData()  {
-    db,err := sql.Open("mysql","root:abc123123@tcp(23.106.155.177:3306)/test?charset=utf8")
+    db,err := sql.Open("mysql","root:abc123123@tcp(127.0.0.1:3306)/test?charset=utf8")
     checkErr(err)
     stmp,err := db.Prepare("DELETE FROM userinfo WHERE uid=?")
     checkErr(err)
